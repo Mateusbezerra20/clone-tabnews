@@ -27,7 +27,12 @@ function DatabaseStatus({ status }) {
   });
 
   if (isLoading && !data) {
-    return "Carregando...";
+    return (
+      <>
+        <h2>Banco de Dados</h2>
+        <div>Carregando...</div>
+      </>
+    );
   }
 
   const statusIcon = status === "ok" ? "✅" : "⚠️";
